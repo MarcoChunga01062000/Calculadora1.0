@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         rd7 = (RadioButton)findViewById(R.id.rbfactorial);
     }
     public void Calcular(View view){
+        if (t2.getText().toString().length() != 0 && t3.getText().toString().length() != 0){
         String t2string = t2.getText().toString();
         String t3String = t3.getText().toString();
         int t2int = Integer.parseInt(t2string);
@@ -79,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
             }
             String resultado = String.valueOf(factorial);
             tx1.setText(resultado);
+        }
+        } else {
+            Toast.makeText(this, "Hace falta un número...!", Toast.LENGTH_SHORT).show();
         }
     }
 }
